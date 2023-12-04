@@ -1,11 +1,12 @@
 const std = @import("std");
 
 
-
 pub fn build(b: *std.Build) void {
+
+
     const exe = b.addExecutable(.{
-        .name = "hello",                                // name of the compiled file
-        .root_source_file = .{ .path = "main.zig" },    // path to the main file
+        .name = "quadratic",                                // name of the compiled file
+        .root_source_file = .{ .path = "quadratic.zig" },    // path to the main file
     });
 
     b.installArtifact(exe);
