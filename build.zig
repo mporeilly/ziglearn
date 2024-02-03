@@ -1,8 +1,8 @@
-const std = @import("std");
+const std = @import("std");     // 
 
 
-pub fn build(b: *std.Build) void {
-
+pub fn build(b: *std.Build) void {  // function build b is pointer to std.build return nothing
+    
 
     const exe = b.addExecutable(.{
         .name = "quadratic",                                // name of the compiled file
