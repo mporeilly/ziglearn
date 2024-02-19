@@ -18,6 +18,15 @@ pub fn main() !void { // does not return
     try stdout.print("What is you value for c: ", .{});
     const c = try stdin.readUntilDelimiter(&inputc, '\n');
 
+    // started using https://github.com/nvim-lua/kickstart.nvim
+    // to search use "space" this brings up the telescope
+    // with auto complete use "ctrl+n" and "ctrl-p" to navigate up and down
+    // got to definition "gd" then use "ctrl+o" to get back
+    // can use "ctrl+o" and "ctrl+i" to jump between back and forth
+    // can also search ":Telescope keymaps"
+    //
+    // I where has this been all my life!
+
     // [-b +- sqrt(b^2 - 4ac)]/2a
     // use j for imaginary as i is for current (prepared to die on this hill)
 
@@ -45,7 +54,7 @@ pub fn main() !void { // does not return
         try stdout.print("The roots of the above function are {d} and {d}\n", .{ first_term + second_term, first_term - second_term });
     } else {
         const second_term = (std.math.sqrt(-1 * second_term_not_sqrt_num)) / (2 * parsed_a);
-        try stdout.print("The roots of the above function are {d}±{d}j\n", .{ first_term, second_term});
+        try stdout.print("The roots of the above function are {d}±{d}j\n", .{ first_term, second_term });
     }
     // UNDERSTANDING TRANSITIVE FAILURES
     //
